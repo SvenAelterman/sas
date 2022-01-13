@@ -17,20 +17,9 @@ namespace sas.api
 {
     public static class BackgroundJobs
     {
-        /**
-            <summary>Weekly Timer Method to calculate all folder sizes.
-            </summary>
-            <example>
-                Manually run by calling
-                  POST https://{host}/api/CalculateAllFolderSizes
-                  Header - x-functions-key = to the function key
-                  Content-Type = application/json
-                  body set as raw = { }
-            </example>
-        **/
         [FunctionName("CalculateAllFolderSizes")]
-        public static IActionResult CalculateAllFolderSizes(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "Configuration/CalculateFolderSizes")]
+        public static async Task<IActionResult> CalculateAllFolderSizes(
+            [HttpTrigger(AuthorizationLevel.Function, "POST", Route = "Configuration/CalculateFolderSizes")]
             HttpRequest req, ILogger log)
         {
             var configResult = SasConfiguration.GetConfiguration();
@@ -57,7 +46,7 @@ namespace sas.api
 
                     long size = 0;
                     foreach( var folder in folders) {
-                        size += folderOperations.CalculateFolderSize(folder.Name);
+                        size += await folderOperations.CalculateFolderSize(folder.Name);
                     }
                     
                     msg = $"  {filesystem.Name} aggregate size {size} bytes";
