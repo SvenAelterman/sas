@@ -1,6 +1,6 @@
 const strings = {
 	appTitle: 'Storage as a Service',
-	companyName: 'Americas University',
+	companyName: 'Sven Aelterman & Company',
 	directoryCreated: name => `Folder '${name}' Created!`,
 	fileSystemLabel: 'File System',
 	logIn: 'Log In',
