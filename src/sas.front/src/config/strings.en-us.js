@@ -5,7 +5,7 @@ const strings = {
 	fileSystemLabel: 'File System',
 	logIn: 'Log In',
 	logOut: 'Log out',
-	logoImage: 'https://assets.about.me/background/users/s/v/e/svenaelterman_1573587909_646.jpg',
+	logoImage: '/sa.jpg',
 	logoText: 'Sven Aelterman',
 	members: 'members',
 	newFolder: 'New Folder',
