@@ -90,7 +90,7 @@ TODO: pending
 
 ### Prepare the storage accounts
 
-In order to allow this application to modify storage accounts, you need to assign the *Storage Blob Data Owner* role to the application registration for each of the storage accounts to be managed.
+In order to allow this application to manage and modify storage accounts, you need to assign the *User Access Administrator* and *Storage Blob Data Owner* roles to the application registration for each of the storage accounts to be managed.
 
 If you named the application *Storage-as-a-Service*, the RBAC entry would look like this:
 
