@@ -44,25 +44,11 @@
 		{
 			"route": "/api/TopLevelFolders",
 			"methods": [
-				"GET"
-			],
-			"allowedRoles": [
-				"authenticated"
-			]
-		},
-		{
-			"route": "/api/Configuration/*",
-			"allowedRoles": [
-				"StatisticsCreate"
-			]
-		},
-		{
-			"route": "/api/TopLevelFolders/*",
-			"methods": [
+				"GET",
 				"POST"
 			],
 			"allowedRoles": [
-				"FolderCreateAll"
+				"authenticated"
 			]
 		}
 	]
