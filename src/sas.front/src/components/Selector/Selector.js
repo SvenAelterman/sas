@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import PropTypes from 'prop-types'
 import InputLabel from "@mui/material/InputLabel"
 import FormControl from "@mui/material/FormControl"
